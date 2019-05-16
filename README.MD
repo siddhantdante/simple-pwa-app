@@ -44,13 +44,26 @@ A complete manifest.json file for a progressive web app.
 Tell the browser about your manifest
 When you have created the manifest, add a link tag to all the pages that encompass your web app:
 
-service worker install link  ``` <link rel="manifest" href="/manifest.json"> ```
+``` <link rel="manifest" href="/manifest.json"> ```
 
 [Read more about manifest file](https://developers.google.com/web/fundamentals/web-app-manifest/)
 
 
 # Service worker
-Once the service worker installed(by link tag -> on line 48) in your browser you can see it by going in 'devlopment tools -> application tab' there you will find service worker.
+Once the service worker installed in your browser you can see it by going in 'devlopment tools -> application tab' there you will find service worker.
+
+for installing service worker add this line of code in your main js file.
+
+```
+if (!('serviceWorker' in navigator)) {
+  console.log('Service Worker not supported');
+  return;
+}
+navigator.serviceWorker.register('/service-worker.js')
+.then(function(registration) {
+  console.log('SW registered! Scope is:', registration.scope);
+}); // .catch a registration error
+```
 
 [service worker intro](https://docs.google.com/presentation/d/1bFVDRa71JK0ilr6lS6y9Twqp9gy8jzV1O8FFbG4A3qk/edit#slide=id.p4)
 
