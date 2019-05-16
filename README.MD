@@ -10,15 +10,14 @@ In this app important files are.
   1. Manifest.json which is public folder.
   2. sw.js(The service worker) in public folder
   
-=====================================
-          Manifest file
-=====================================
+
+# Manifest file
 The web app manifest is a simple JSON file that tells the browser about your web application and how it should behave when 'installed' on the user's mobile device or desktop. Having a manifest is required by Chrome to show the Add to Home Screen prompt.
 
 
 Create the manifest
 A complete manifest.json file for a progressive web app.
-
+...
 {
   "short_name": "Maps",
   "name": "Google Maps",
@@ -40,7 +39,7 @@ A complete manifest.json file for a progressive web app.
   "scope": "/maps/",
   "theme_color": "#3367D6"
 }
-
+...
 
 Tell the browser about your manifest
 When you have created the manifest, add a link tag to all the pages that encompass your web app:
@@ -50,11 +49,7 @@ When you have created the manifest, add a link tag to all the pages that encompa
 [Read more about manifest file](https://developers.google.com/web/fundamentals/web-app-manifest/)
 
 
-==================================
-        Service worker
-==================================
-
-
+# Service worker
 Once the service worker installed(by link script tag -> on line 48) in your browser you can see it by going in 'devlopment tools -> application tab' there you will find service worker.
 
 [service worker intro](https://docs.google.com/presentation/d/1bFVDRa71JK0ilr6lS6y9Twqp9gy8jzV1O8FFbG4A3qk/edit#slide=id.p4)
