@@ -17,7 +17,7 @@ The web app manifest is a simple JSON file that tells the browser about your web
 
 Create the manifest
 A complete manifest.json file for a progressive web app.
-...
+```
 {
   "short_name": "Maps",
   "name": "Google Maps",
@@ -39,7 +39,7 @@ A complete manifest.json file for a progressive web app.
   "scope": "/maps/",
   "theme_color": "#3367D6"
 }
-...
+```
 
 Tell the browser about your manifest
 When you have created the manifest, add a link tag to all the pages that encompass your web app:
